@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://bilalbouizdouzene.github.io/sitemap.xml
