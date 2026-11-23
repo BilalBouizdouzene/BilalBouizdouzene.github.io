@@ -119,6 +119,36 @@ export const projects: Project[] = [
     github: 'https://github.com/BilalBouizdouzene/EchoMind', featured: false, type: 'Independent', repositoryMeta: 'Public · Python · MIT License · Updated 15 hours ago', accent: 'cyan', visual: 'network', cover: '/images/projects/echomind.jpg',
   },
   {
+    id: 'regulagraph-ai', title: 'RegulaGraph AI — Compliance Evidence Intelligence', category: 'RAG & Agentic AI',
+    shortDescription: 'Traceable document evidence workspace for security, compliance and audit review.',
+    fullDescription: 'A local compliance-intelligence prototype that ingests versioned documents, combines lexical and semantic retrieval, and maps evidence to requirements with provenance. RegulaGraph supports human review, citation verification, audit events, change-impact analysis and corrective actions; its synthetic corpus is for evaluation and demonstration, not certification or legal conclusions.',
+    technologies: ['Python', 'FastAPI', 'React', 'TypeScript', 'SQLite', 'BM25 / TF-IDF', 'FAISS', 'Sentence-Transformers', 'Ollama'],
+    features: ['Versioned document import and passage extraction', 'Hybrid lexical and dense retrieval with RRF fusion', 'Evidence states for supported, partial, contradictory and missing coverage', 'Citation verification with document, version, page and section provenance', 'Human review matrix, audit log and corrective-action workflow', 'Synthetic evaluation lab for retrieval and evidence reasoning'],
+    architecture: ['Documents + versions', 'Extraction + chunking', 'BM25 / dense retrieval', 'RRF + optional reranking', 'Evidence-to-requirement mapping', 'Human review + audit trail', 'Change impact + corrective actions'],
+    challenges: ['Keeping every conclusion tied to inspectable source passages', 'Separating evidence coverage from a legal or compliance verdict', 'Providing useful local fallbacks when semantic models are unavailable', 'Evaluating retrieval and abstention behavior on synthetic data'],
+    github: 'https://github.com/BilalBouizdouzene/regulagraph-ai', featured: true, type: 'Independent', repositoryMeta: 'Public · Python · MIT License', accent: 'blue', visual: 'document', cover: '/images/projects/regulagraph-ai.jpg',
+  },
+  {
+    id: 'supportfusion-ai', title: 'SupportFusion AI — Incident Intelligence Workspace', category: 'RAG & Agentic AI',
+    shortDescription: 'Evidence-backed technical support workspace combining incidents, documentation and hybrid search.',
+    fullDescription: 'A local FastAPI and React workstation that collects GitHub issues and official product documentation into a provenance-aware SQLite store. It combines lexical search with optional FAISS embeddings, Reciprocal Rank Fusion and Cross-Encoder reranking, then analyzes tickets with supporting evidence, missing context and a response draft for technician review.',
+    technologies: ['Python', 'FastAPI', 'SQLAlchemy', 'Alembic', 'React', 'TypeScript', 'SQLite', 'FAISS', 'Sentence-Transformers'],
+    features: ['Paginated GitHub issue collection with synchronization recovery', 'Bounded ingestion of official documentation with source provenance', 'Lexical search, error-code detection and optional dense retrieval', 'RRF fusion and Cross-Encoder reranking in standard mode', 'Incident analysis with evidence, missing information and response draft', 'Local dashboards for incidents, sources, logs and search results'],
+    architecture: ['GitHub issues + product docs', 'Collectors + provenance store', 'SQLite knowledge base', 'Lexical / dense retrieval', 'RRF + Cross-Encoder', 'Evidence-backed incident analysis', 'Technician review workspace'],
+    challenges: ['Keeping collected material traceable to its original source', 'Combining fast lexical signals with optional local semantic models', 'Making response drafts useful without presenting them as autonomous resolution', 'Maintaining a reproducible local corpus and evaluation workflow'],
+    github: 'https://github.com/BilalBouizdouzene/supportfusion-ai', featured: true, type: 'Independent', repositoryMeta: 'Public · Python · MIT License', accent: 'violet', visual: 'network', cover: '/images/projects/supportfusion-ai.jpg',
+  },
+  {
+    id: 'carepath-ai', title: 'CarePath AI — Human-Centred Follow-up Workflow', category: 'Speech AI',
+    shortDescription: 'Human-in-the-loop follow-up workspace turning patient voice notes into evidenced tasks and actions.',
+    fullDescription: 'A local React and FastAPI prototype for post-discharge follow-up. It transcribes French audio declarations with faster-whisper, extracts explicit facts with evidence, supports patient–follower messaging, and coordinates tasks, appointments, notifications and timeline actions. CarePath is a workflow prototype, not a medical device or diagnostic system.',
+    technologies: ['TypeScript', 'React', 'Vite', 'Python', 'FastAPI', 'faster-whisper', 'SQLite', 'SQLAlchemy'],
+    features: ['Patient portal for audio declarations, messages and follow-up plans', 'Follower workspace with patient search, tasks and human verification', 'French speech transcription with timestamped segments', 'Evidence-linked extraction of explicit facts from transcripts', 'Persistent messaging, appointments, notifications and intervention timeline', 'Reproducible text evaluation and workflow indicators'],
+    architecture: ['Patient audio declaration', 'FastAPI validation + storage', 'faster-whisper transcription', 'Rule-based fact extraction', 'Human review + clarification', 'Tasks / appointments / messages', 'Follow-up timeline'],
+    challenges: ['Keeping extracted observations limited to what the transcript supports', 'Designing a clear boundary between automation and human review', 'Connecting voice input to operational follow-up without diagnostic claims', 'Keeping the local demonstration data separate from real health records'],
+    github: 'https://github.com/BilalBouizdouzene/carepath-ai', featured: true, type: 'Independent', repositoryMeta: 'Public · TypeScript · MIT License', accent: 'cyan', visual: 'wave', cover: '/images/projects/carepath-ai.jpg',
+  },
+  {
     id: 'absi', title: 'ABSI — AI Brainstorming & Idea Structuring', category: 'NLP & LLM', shortDescription: 'Multimodal brainstorming agent for generating, scoring and structuring ideas.', fullDescription: 'ABSI is a Flask-based multimodal brainstorming agent that extracts knowledge from PDFs, DOCX files, images and audio, generates and scores ideas with LLMs, groups them thematically and visualises the result through graphs and mind maps.', technologies: ['Python', 'Flask', 'LLMs', 'Sentence Transformers', 'KMeans', 'HDBSCAN', 'UMAP', 'Plotly'], features: ['Multimodal extraction with OCR and transcription', 'Idea generation with originality, coherence and relevance scores', 'Semantic clustering and theme extraction', 'Interactive graphs and mind maps', 'JSON and Plotly visualisation exports'], architecture: ['PDF / DOCX / image / audio', 'Extraction + embeddings', 'RAG + reranking', 'Idea scoring', 'KMeans / HDBSCAN / UMAP', 'Graphs + mind maps'], challenges: ['Turning heterogeneous inputs into comparable ideas', 'Making creative outputs measurable', 'Keeping visual exploration useful and interpretable'], github: 'https://github.com/BilalBouizdouzene/ABSI', featured: false, type: 'Independent', accent: 'violet', visual: 'grid', cover: '/images/projects/absi.jpg',
   },
   {
@@ -141,7 +171,7 @@ export const projects: Project[] = [
   },
 ]
 
-const selectedOrder = ['silbo-asr', 'claimshield-ai']
+const selectedOrder = ['regulagraph-ai', 'supportfusion-ai', 'carepath-ai', 'silbo-asr', 'claimshield-ai', 'novatel']
 export const featuredProjects = projects.filter((project) => project.featured).sort((a, b) => {
   const aIndex = selectedOrder.indexOf(a.id)
   const bIndex = selectedOrder.indexOf(b.id)
