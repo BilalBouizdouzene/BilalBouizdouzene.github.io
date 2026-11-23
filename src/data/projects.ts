@@ -171,7 +171,7 @@ export const projects: Project[] = [
   },
 ]
 
-const selectedOrder = ['regulagraph-ai', 'supportfusion-ai', 'carepath-ai', 'silbo-asr', 'claimshield-ai', 'novatel']
+const selectedOrder = ['silbo-asr', 'novatel', 'regulagraph-ai', 'supportfusion-ai', 'carepath-ai', 'claimshield-ai']
 export const featuredProjects = projects.filter((project) => project.featured).sort((a, b) => {
   const aIndex = selectedOrder.indexOf(a.id)
   const bIndex = selectedOrder.indexOf(b.id)
